@@ -14,7 +14,7 @@ const CONFIG = {
   // ── Google Apps Script 웹앱 URL ──
   // Apps Script 웹앱 배포 후 받은 URL을 입력하세요.
   // 이 URL 하나로 모든 고객사 스프레드시트에 접근합니다.
-  WEBAPP_URL: 'https://script.google.com/macros/s/AKfycby664n3nBBoECOzx6LfG70uO-LpjFNFUUxbwTdrQNRIjNfMBTYWLJ1UrssoFXP-bSpc/exec',
+  WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbxEg3RhFev_vwsF4cxPLBMQaCmWDpFblk7Kj23xFv8Dcsxb0yxMjq7DCr7zbZjZ21jUcg/exec',
 
   // ── Tableau 워크시트 이름 (대시보드에서 사용하는 이름과 일치시킬 것) ──
   PATENT_WORKSHEET_NAME: '기술이전특허 목록',
