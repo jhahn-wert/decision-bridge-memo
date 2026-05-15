@@ -7,12 +7,12 @@
     <name>DECISION BRIDGE 특허 메모</name>
     <description>보유 특허에 메모를 추가하고 관리하는 Extension</description>
     <author name="Wert Intelligence"
-      email="bgyoo@wert.co.kr"
+      email="jhahn@wert.co.kr"
       organization="Wert Intelligence"
       website="https://www.wert.co.kr"/>
     <min-api-version>1.7</min-api-version>
     <source-location>
-      <url>https://wert-bgyoo.github.io/decision-bridge-memo/index.html</url>
+      <url>https://jhahn-wert.github.io/decision-bridge-memo/index.html</url>
     </source-location>
     <icon/>
     <permissions>
