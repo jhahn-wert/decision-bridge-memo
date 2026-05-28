@@ -54,7 +54,7 @@ const CONFIG = {
   ],
 
   // ── 팝업 크기 (1920×1080 기준) ──
-  DIALOG_MEMO: { width: 520, height: 500 },
+  DIALOG_MEMO: { width: 520, height: 560 },
   DIALOG_LIST: { width: 860, height: 640 },
   DIALOG_SETTINGS: { width: 560, height: 580 },
 
