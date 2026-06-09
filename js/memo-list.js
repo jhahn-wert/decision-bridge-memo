@@ -166,6 +166,11 @@ function renderMemoList() {
                 `<option value="${s}" ${s === m['상태'] ? 'selected' : ''}>${s}</option>`
               ).join('')}
             </select>
+            ${CONFIG.AUTHORS.length === 0
+              ? `<input type="text" class="edit-author" value="${escHtml(m['작성자'] || '')}" placeholder="작성자">`
+              : `<select class="edit-author">${CONFIG.AUTHORS.map(a =>
+                  `<option value="${a}" ${a === m['작성자'] ? 'selected' : ''}>${a}</option>`
+                ).join('')}</select>`}
             <button class="btn-sm save" onclick="saveEdit(${idx})">저장</button>
             <button class="btn-sm cancel" onclick="cancelEdit(${idx})">취소</button>
           </div>
@@ -203,11 +208,14 @@ async function saveEdit(idx) {
   const memo = filteredMemos[idx];
   const el = document.getElementById(`memo-${idx}`);
 
+  const authorEl = el.querySelector('.edit-author');
+
   const updatedData = {
     ...memo,
     '메모내용': el.querySelector('.edit-content').value.trim(),
     '카테고리': el.querySelector('.edit-category').value,
-    '상태': el.querySelector('.edit-status').value
+    '상태': el.querySelector('.edit-status').value,
+    '작성자': authorEl ? authorEl.value.trim() : memo['작성자']
   };
 
   if (!updatedData['메모내용']) {
