@@ -11,7 +11,17 @@ let patentsWithMemo = new Set();
 
   document.getElementById('btnSettings').addEventListener('click', openSettingsDialog);
 
+  // 관리자 전용 접근: [설정] 버튼은 기본 숨김(최종 사용자 실수 방지).
+  // 최초 연결(미설정) 시에만 버튼을 노출하고, 이후 재설정은 Ctrl+Alt+S 단축키로 연다.
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.altKey && (e.key === 's' || e.key === 'S')) {
+      e.preventDefault();
+      openSettingsDialog();
+    }
+  });
+
   if (!isClientConfigured()) {
+    document.getElementById('btnSettings').style.display = '';  // 최초 연결용으로만 노출
     showNotConfigured();
     await openSettingsDialog();
     return;
